@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Helvetica-bold";
+  src: url("../fonts/Helvetica/Helvetica-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica-medium";
+  src: url("../fonts/Helvetica/helvetica_medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica-regular";
+  src: url("../fonts/Helvetica/Helvetica.ttf") format("ttf");
+}
+
+#projectInside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroshot {
+  display: block;
+  width: 100%;
+}
+
+.heroshotVideo {
+  object-fit: cover;
+  width: 100%;
+}
+
+.words {
+  width: 60%;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10% 0%;
+}
+
+.name {
+  font-family: "Helvetica-bold";
+  font-size: 30px;
+}
+
+.info {
+  font-family: "Helvetica-regular";
+  font-size: 19px;
+  color: #555555;
+  margin-top: 15%;
+}
+
+.description {
+  font-family: "Helvetica-regular";
+  font-size: 19px;
+  color: #555555;
+  line-height: 120%;
+  text-align: justify;
+  width: 60%;
+}
+
+.words2 {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10% 0%;
+}
+
+.description2 {
+  width: 100%;
+}
+
+.collageWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.collage {
+  width: 50%;
+  object-fit: cover;
+  flex: 1 1 40%;
+}
