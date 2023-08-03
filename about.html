@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jongik Jeon</title>
+  </head>
+  <body>
+    <div class="headerArea">
+      <div class="headerButtons">
+        <a id="header__JongikJeon" href="index.html">Jongik Jeon</a>
+        <a id="header__About" style="color: #d02e2e" href="about.html">About</a>
+        <a id="header__Projects" href="projects.html">Projects</a>
+      </div>
+    </div>
+    <div class="contentsArea">
+      <div class="aboutContent">
+        <div class="aboutIntroduction">
+          <div id="ideator">Ideator & Maker</div>
+          <div id="paragraph">
+            Jongik Jeon is an ideator and maker, delving into the fields of
+            auditory experience, tangible interface and experimental
+            interaction. He specializes in harnessing new technologies and
+            transforming futuristic ideas into real-world applications.<br /><br />Jongik
+            believes that emerging technologies will introduce novel auditory
+            experiences across various aspects of our future lives. His goal is
+            to innovate people's future auditory experiences through a
+            design-based approach.<br /><br />Jongik is currently studying
+            Industrial Design and Culture Technology at KAIST.
+          </div>
+        </div>
+        <div class="aboutContact">
+          <a
+            class="aboutContact__IMGwrapper"
+            href="files/CV.pdf"
+            download="JongikJeonCV"
+            target="_blank"
+          >
+            <img class="aboutContact__IMG" src="img/About/cvIcon.png" />
+          </a>
+          <a
+            class="aboutContact__IMGwrapper"
+            href="https://www.linkedin.com/in/jong-ik-jeon-65a63925a/"
+            target="_blank"
+          >
+            <img class="aboutContact__IMG" src="img/About/linkedinIcon.png" />
+          </a>
+          <a class="aboutContact__IMGwrapper tooltip" href="#">
+            <span id="tooltiptext">matji@kaist.ac.kr</span>
+            <img
+              class="aboutContact__IMG"
+              id="mailIcon"
+              src="img/About/mailIcon.png"
+            />
+            <img
+              class="aboutContact__IMG"
+              id="copyIcon"
+              src="img/About/copyIcon.png"
+              onclick="copyClick()"
+            />
+            <img
+              class="aboutContact__IMG"
+              id="copyFinishIcon"
+              src="img/About/copyFinishIcon.png"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let text = document.getElementById("tooltiptext");
+    let mailicon = document.getElementById("mailIcon");
+    let copyicon = document.getElementById("copyIcon");
+    let copyfinishicon = document.getElementById("copyFinishIcon");
+
+    const copyClick = async () => {
+      try {
+        await navigator.clipboard.writeText(text.textContent);
+        text.textContent = "copied!";
+        copyicon.style.visibility = "hidden";
+        copyfinishicon.style.visibility = "visible";
+        console.log("Content copied to clipboard");
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    };
+
+    mailicon.addEventListener("mouseenter", (event) => {
+      if (copyfinishicon.style.visibility != "visible") {
+        text.style.visibility = "visible";
+        mailicon.style.visibility = "hidden";
+        copyicon.style.visibility = "visible";
+        copyfinishicon.style.visibility = "hidden";
+      }
+    });
+
+    copyicon.addEventListener("mouseout", (event) => {
+      if (copyfinishicon.style.visibility != "visible") {
+        text.style.visibility = "hidden";
+        text.textContent = "matji@kaist.ac.kr";
+        mailicon.style.visibility = "visible";
+        copyicon.style.visibility = "hidden";
+        copyfinishicon.style.visibility = "hidden";
+      }
+    });
+
+    copyfinishicon.addEventListener("mouseout", (event) => {
+      text.style.visibility = "hidden";
+      text.textContent = "matji@kaist.ac.kr";
+      mailicon.style.pointerEvents = "auto";
+      mailicon.style.visibility = "visible";
+      copyicon.style.pointerEvents = "auto";
+      copyicon.style.visibility = "hidden";
+      copyfinishicon.style.visibility = "hidden";
+    });
+  </script>
+</html>
