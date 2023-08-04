@@ -1,0 +1,7 @@
+@import "reset.css";
+
+@import "components/headerArea.css";
+@import "components/contentsArea.css";
+@import "pages/about.css";
+@import "pages/projects.css";
+@import "pages/projectPage.css";
