@@ -91,3 +91,16 @@
   object-fit: cover;
   flex: 1 1 40%;
 }
+
+.collageVideoWrap {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding-bottom: 56.25%;
+}
+
+.collageVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

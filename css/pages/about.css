@@ -100,15 +100,3 @@
   visibility: hidden;
   cursor: default;
 }
-
-/* .tooltip:hover #tooltiptext { */
-/* visibility: visible;
-}
-
-.tooltip:hover #mailIcon {
-  visibility: hidden;
-}
-
-.tooltip:hover #copyIcon {
-  visibility: visible;
-} */
