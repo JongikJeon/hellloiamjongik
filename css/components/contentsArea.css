@@ -3,9 +3,9 @@
   width: 83.33%;
 }
 
-#landingVideo {
+/* #landingVideo {
   object-fit: cover;
-}
+} */
 #landingVideo {
   position: fixed;
   top: 0;
