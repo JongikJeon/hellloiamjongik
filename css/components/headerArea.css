@@ -1,6 +1,6 @@
 @font-face {
   font-family: "NoticiaText-Bold";
-  src: url("../fonts/NoticiaText.NoticiaText-Bold.woff") format("woff");
+  src: url("../fonts/NoticiaText/NoticiaText-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Raleway-Medium";
